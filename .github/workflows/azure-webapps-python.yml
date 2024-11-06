@@ -1,1 +1,23 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    # Add your future build steps here
+    - name: Install Dependencies
+      run: echo "Skipping install for now - no code"
+
+    # Placeholder for deployment step
+    - name: Deploy
+      run: echo "Deployment placeholder"
 
