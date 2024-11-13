@@ -68,9 +68,11 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run backend tests
+        env:
+         PYTHONPATH: "${{ github.workspace }}/backend"
         run: |
-          cd backend
-          pytest
+         cd backend
+         pytest
 
   machine-learning:
     name: Build and Test Machine Learning Module (TensorFlow)
